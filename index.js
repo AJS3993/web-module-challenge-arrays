@@ -167,10 +167,18 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr,str){
-  newArr=[]
-  if (arr.includes(str)){
-newArr.push(str)
+  let newArr=[]
+
+  for (let i =0 ; i<arr.length;i++){
+    if (arr[i].split(' ').includes(str)){
+      newArr.push(arr[i])
+    }
   }
+
+//   if (arr.includes(str)){
+// newArr.push(str)
+//   }
+
   return newArr
 }
 console.log(filterByWord(originalFlavors, "Chocolate"))
